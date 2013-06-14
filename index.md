@@ -5,15 +5,18 @@ author: Timely Portfolio
 github: {user: timelyportfolio, repo: rCharts_morris_gettingstarted, branch: "gh-pages"}
 framework: bootstrap
 mode: selfcontained
-widgets: [morris]
+ext_widgets: {rCharts: "libraries/morris"}
 highlighter: prettify
 hitheme: twitter-bootstrap
 ---
-  
+
+<style>
+.container { width: 900px; }
+</style>
   
 <a href="https://github.com/timelyportfolio/rCharts_morris_gettingstarted"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-<h1 style = "font-size: 72px;line-height: 72px;color: #0b62a4;margin: 20px 0 20px 0;text-shadow: 1px 1px 5px #789;">morris.js from <a href = "https://github.com/ramnathv/rCharts">rCharts</a></h1>
+<h1 style = "font-size: 72px;line-height: 72px;color: #0b62a4;margin: 20px 0 20px 0;text-shadow: 1px 1px 5px #789;">morris.js from <a href = "http://ramnathv.github.io/rCharts">rCharts</a></h1>
 
 ## Getting started
 <br/>
@@ -21,7 +24,7 @@ _ _ _
 **This is a near exact replica of the [morris.js getting started tutorial](http://www.oesmith.co.uk/morris.js/index.html).  All credit and attribution should be directed there.  See the copyright and license at the end of this page.**   
 - - -
 
-Add morris.js and its dependencies ([jQuery](http://jquery.com/) & [Raphael](http://raphaeljs.com/)) to your page.   This is all accomplished through the `widgets: [morris]` line in the header of this markdown.  Slidify will include all the necessary components based on the config.yml in the morris directory.
+The original tutorial says, "Add morris.js and its dependencies ([jQuery](http://jquery.com/) & [Raphael](http://raphaeljs.com/)) to your page."   Fortunately for us, rCharts handles this for us, and slidify can access this rCharts' brilliance through the `ext_widgets: {rCharts: "libraries/morris"}` line in the header of this markdown.  The config.yml in the morris directory performs the magic.
 
 <br/>
 <br/>
@@ -60,8 +63,8 @@ m1
 <script type='text/javascript'>
     var chartParams = {
  "element": "line-chart",
-"width":    800,
-"height":    400,
+"width":            800,
+"height":            400,
 "xkey": "year",
 "ykeys": [
  "value" 
@@ -69,23 +72,23 @@ m1
 "data": [
  {
  "year": "2008",
-"value":     20 
+"value":             20 
 },
 {
  "year": "2009",
-"value":     10 
+"value":             10 
 },
 {
  "year": "2010",
-"value":      5 
+"value":              5 
 },
 {
  "year": "2011",
-"value":      5 
+"value":              5 
 },
 {
  "year": "2012",
-"value":     20 
+"value":             20 
 } 
 ],
 "labels": "value",
